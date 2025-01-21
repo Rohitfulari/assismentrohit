@@ -1,0 +1,23 @@
+function index(inputString){
+    const clean = inputString.replace(/\s+/g,'').toUpperCase();
+
+    const count  = {};
+    const result = [];
+
+    for(let char of clean){
+        if(!count[char])
+        {
+            count[char] = 1;
+            result.push(char);
+        }
+        else{
+            count[char]++;
+        }
+    }
+
+    return result.map((char) => `${char}-${count[char]}`).join('\n');
+    
+}
+
+const input = "Amolya Sharma";
+console.log(index(input));
