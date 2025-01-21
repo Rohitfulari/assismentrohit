@@ -1,8 +1,8 @@
 
 import './App.css';
-import Search from './Component/Search';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Canva from './Component/Canva';
+import Records from './Records';
 
 function App() {
   return (
@@ -10,8 +10,9 @@ function App() {
       <Router>
       
       <Routes>
-        <Route path="/" element={<Search />} />
-        <Route path="/canva" element={<Canva></Canva>} />
+        {/* <Route path="/" element={<Search />} />
+        */}
+       <Route path='/' element={<Records></Records>}/>
        
       </Routes>
     </Router>
